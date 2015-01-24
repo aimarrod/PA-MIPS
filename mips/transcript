@@ -161,3 +161,97 @@ add wave -position end  sim:/tags_test/t/tagList[1]
 add wave -position end  sim:/tags_test/t/tagList[0]
 add wave -position end  sim:/tags_test/miss
 run 500
+# Compile of cache.v was successful.
+# Compile of memory.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of subunits.v was successful.
+# 4 compiles, 0 failed with no errors. 
+# Compile of cache.v failed with 1 errors.
+# Compile of memory.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of subunits.v was successful.
+# 4 compiles, 1 failed with 1 error. 
+# Compile of cache.v failed with 1 errors.
+# Compile of cache.v failed with 1 errors.
+# Compile of cache.v was successful.
+# Compile of cache.v failed with 1 errors.
+# Compile of memory.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of subunits.v was successful.
+# 4 compiles, 1 failed with 1 error. 
+# Compile of cache.v failed with 1 errors.
+# Compile of memory.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of subunits.v was successful.
+# 4 compiles, 1 failed with 1 error. 
+# Compile of cache.v failed with 1 errors.
+# Compile of memory.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of subunits.v was successful.
+# 4 compiles, 1 failed with 1 error. 
+# Compile of cache.v was successful.
+# Compile of memory.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of subunits.v was successful.
+# 4 compiles, 0 failed with no errors. 
+vsim -L pa_mips pa_mips.tags_test
+# vsim -L pa_mips pa_mips.tags_test 
+# Loading pa_mips.tags_test
+# Loading pa_mips.tags
+# Loading pa_mips.cache
+add wave -position end  sim:/tags_test/c/idx
+add wave -position end  sim:/tags_test/t/idx
+add wave -position end  sim:/tags_test/c/idb
+add wave -position end  sim:/tags_test/c/we
+add wave -position end  sim:/tags_test/t/miss
+add wave -position end  sim:/tags_test/c/data_out
+add wave -position end  sim:/tags_test/c/data[0]
+add wave -position end  sim:/tags_test/c/data[0][0]
+add wave -position end  sim:/tags_test/c/data[0][1]
+add wave -position end  sim:/tags_test/c/data[0][2]
+run 500
+vsim -L pa_mips pa_mips.tags_test
+# vsim -L pa_mips pa_mips.tags_test 
+# Loading pa_mips.tags_test
+# Loading pa_mips.tags
+# Loading pa_mips.cache
+add wave -position end  sim:/tags_test/c/data[0][0]
+add wave -position end  sim:/tags_test/c/data[0][0]
+add wave -position end  sim:/tags_test/c/data[1][2]
+add wave -position end  sim:/tags_test/c/data[0][1]
+add wave -position end  sim:/tags_test/c/data[0][2]
+add wave -position end  sim:/tags_test/c/data[1][0]
+add wave -position end  sim:/tags_test/c/data[1][1]
+add wave -position end  sim:/tags_test/c/data[1][2]
+add wave -position end  sim:/tags_test/c/we
+run 500
+add wave -position end  sim:/tags_test/c/clk
+run 500
+add wave -position end  sim:/tags_test/clk
+add wave -position end  sim:/tags_test/clk
+restart -f
+# Compile of cache.v was successful.
+# Compile of memory.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of subunits.v was successful.
+# 4 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa_mips.tags_test
+# Loading pa_mips.tags
+# Loading pa_mips.cache
+run 500
+# Compile of cache.v failed with 1 errors.
+# Compile of memory.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of subunits.v was successful.
+# 4 compiles, 1 failed with 1 error. 
+# Compile of cache.v failed with 1 errors.
+# Compile of memory.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of subunits.v was successful.
+# 4 compiles, 1 failed with 1 error. 
+# Compile of cache.v was successful.
+# Compile of memory.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of subunits.v was successful.
+# 4 compiles, 0 failed with no errors. 
