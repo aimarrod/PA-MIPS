@@ -1,18 +1,30 @@
-module control(input [3:0] op, output pc_src, output st_data);
+module control(
+	input [5:0] op,
+	output mem_write,
+	output alu_src,
+	output alu_reg_write,
+	output mem_reg_write,
+	output long_write,
+	output branch
+);
 
- wire regdst,alusrc,memtoreg,regwrite,memread,memwrite,branch;
 
  //determines type of instruction
- wire ldb = ~op[3]&~op[2]&~op[1]&~op[0]; //0000
- wire ldh = ~op[3]&~op[2]&~op[1]&op[0]; //0001
- wire addb = ~op[3]&op[2]&~op[1]&~op[0]; //0100
- wire addh = ~op[3]&op[2]&~op[1]&op[0]; //0101
- wire stb = ~op[3]&~op[2]&op[1]&~op[0]; //0010
- wire sth = ~op[3]&~op[2]&op[1]&op[0]; //0011
- wire addslw = ~op[3]&op[2]&op[1]&~op[0]; //0110
- wire bnz = ~op[3]&op[2]&op[1]&op[0]; //0111
+ wire lb = op[5]&~op[4]&~op[3]&~op[2]&~op[1]&~op[0]; //100000 LB
+ wire lw = op[5]&~op[4]&~op[3]&~op[2]&op[1]&op[0]; //100011 LW
+ wire aluop = ~op[5]&~op[4]&~op[3]&~op[2]&~op[1]&~op[0]; //000000 ADD
+ wire sb = op[5]&~op[4]&op[3]&~op[2]&~op[1]&~op[0]; //101000 SB
+ wire sw = op[5]&~op[4]&op[3]&~op[2]&op[1]&op[0]; //101011 SW
+ wire addslw = op[5]&op[4]&op[3]&op[2]&op[1]&op[0]; //111111 ADDSLW
+ wire bnz = ~op[5]&~op[4]&~op[3]&op[2]&~op[1]&op[0]; //000101 BNZ
 
- assign st_data = stb | sth; //Store data in data cache
- assign pc_src = bnz;
+ assign mem_write = sb | sw;
+ assign alu_src = lb | lw | sb | sw;
+ assign alu_reg_write = aluop;
+ assign mem_reg_write = lb | lw;
+ assign word = sw | lw;
+ assign long_write = addslw;
+ assign branch = bnz;
+
 endmodule
  
