@@ -1,0 +1,1 @@
+MIPS-based simple architecture.
