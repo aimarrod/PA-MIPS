@@ -1,7 +1,7 @@
 module fetch(
 	input clk,
 	
-	input[31:0] branch_result, 
+	input[20:0] branch_address, 
 	input branch,
 	input pc_write,
 
@@ -24,7 +24,7 @@ always @(posedge clk)
 begin
 	if(pc_write)
 		if(branch) begin
-			pc = branch_result;
+			pc = {{11{pc[31:21]}},branch_address};
 		end
 		else begin
 			pc = pc + 4;

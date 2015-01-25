@@ -10,6 +10,7 @@ module decode(
 	output[4:0] rt,
 	output[4:0] rd,
 	output[31:0] imm,
+	output[20:0] baddr,
 	output[11:0] aluop
 );
 
@@ -27,6 +28,7 @@ assign rs = inst[25:21];
 assign rt = inst[20:16];
 assign rd = inst[15:11];
 assign aluop = inst[11:0];
+assign baddr = inst[20:0];
 assign imm = { {16{inst[15]}}, inst[15:0] };
 
 endmodule

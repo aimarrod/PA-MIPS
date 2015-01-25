@@ -11,7 +11,7 @@ wire IRB_we;
 wire [31:0] inst_F, inst_D; //Instruction propagation wires
 wire [31:0] pc_F, pc_D, pc_EX; //PC propagation wires
 
-wire [31:0] alu_out;
+wire [31:0] result_EX;
 
 wire pc_we;
 
@@ -21,13 +21,14 @@ wire alu_src_D, alu_src_EX;
 wire alu_reg_write_D, alu_reg_write_EX;
 wire mem_reg_write_D, mem_reg_write_EX;
 wire long_write_D, long_write_EX;
-wire branch_D, branch_EX;
+wire branch_D, branch_EX, jump;
 
 //Register selectors
 wire[4:0] rs_D;
 wire[4:0] rt_D;
 wire[4:0] rd_D, rd_EX;
 wire[31:0] imm_D, imm_EX;
+wire[20:0] baddr_D, baddr_EX;
 wire[11:0] aluop_D, aluop_EX;
 
 wire[31:0] rs_data_D, rs_data_EX;
@@ -41,8 +42,8 @@ wire [63:0] mem_stream;
 fetch F(
 	.clk(clk), 
 
-	.branch_result(alu_out),
-	.branch(branch_EX),
+	.branch_address(baddr_EX),
+	.branch(jump),
 	.pc_write(pc_we),
 
 	.fill(ifull),
@@ -78,6 +79,7 @@ decode D(
 	.rt(rt_D),
 	.rd(rd_D),
 	.imm(imm_D),
+	.baddr(baddr_D),
 	.aluop(aluop_D)
 );
 
@@ -124,13 +126,29 @@ ID_EX IDEX(
 	.rd_in(rd_D),
 	.rd_out(rd_EX),
 	.imm_in(imm_D),
-	.imm_out(imm_EX)
+	.imm_out(imm_EX),
+	.baddr_in(baddr_D),
+	.baddr_out(baddr_EX)
 );
+
+exec EX(
+	.rs(rs_data_EX),
+	.rt(rt_data_EX),
+	.imm(imm_EX),
+
+	.result(result_EX),
+
+	.aluop(aluop_EX),
+	.alu_src(alu_src_EX),
+	.branch(branch_EX),
+	.jump(jump)
+);
+
 
 
 always @(reset)
 begin
-	if(reset)
+	if(reset) begin
 		F.pc = 32'd0;
 		IRB.regs[0] <= 0;
 		IRB.regs[1] <= 0;
@@ -164,7 +182,7 @@ begin
 		IRB.regs[29] <= 0;
 		IRB.regs[30] <= 0;
 		IRB.regs[31] <= 0;
-		
+	end
 end
 
 endmodule
