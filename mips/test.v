@@ -3,43 +3,89 @@ module test();
 reg clk;
 reg reset;
 
-reg enabler;
-
-assign p.pc_we = enabler;
-assign p.IFID_we = enabler;
-assign p.IDEX_we = enabler;
-assign p.EXWBTL_we = enabler;
-assign p.TLC_we = enabler;
-assign p.CWB_we = enabler;
-assign p.EXS1_we = enabler;
-assign p.S12_we = enabler;
-assign p.S23_we = enabler;
-assign p.S34_we = enabler;
-assign p.dmiss = !enabler;
-assign p.ROB_stall = !enabler;
-
 pipeline p(clk, reset);
 
 initial begin
-	p.MEM.bytes[0] <= 8'b11110000;
-	p.MEM.bytes[1] <= 8'b01111000;
-	p.MEM.bytes[2] <= 8'b00111100;
-	p.MEM.bytes[3] <= 8'b00011110;
-	p.MEM.bytes[4] <= 8'b00001111;
-	p.MEM.bytes[5] <= 8'b00000111;
-	p.MEM.bytes[6] <= 8'b00000011;
-	p.MEM.bytes[7] <= 8'b00000000;
-	p.MEM.bytes[8] <= 8'b00000000;
 
-	p.F.t.tagList[0] <= 32'd1;
+	//100000 LB
+  	//100011 LW
+  	//000000 ADD
+  	//101000 SB
+  	//101011 SW
+  	//111111 ADDSLW
+  	//000101 BNZ
+	
+	//Instruction 0 Load a 1 to to reg 0
+	p.MEM.bytes[3] <= 8'b10000000;
+	p.MEM.bytes[2] <= 8'b00011111;
+	p.MEM.bytes[1] <= 8'b00000000;
+	p.MEM.bytes[0] <= 8'b00100000;
 
-	enabler = 1;
+	//Instruction 1 Load a 4 to reg 10000
+	p.MEM.bytes[7] <= 8'b10000010;
+	p.MEM.bytes[6] <= 8'b00011111;
+	p.MEM.bytes[5] <= 8'b00000000;
+	p.MEM.bytes[4] <= 8'b00100100;
 
-	reset = 1;
-	#100;
-	clk=0;
-	reset = 0;
-	p.F.pc = 0;
+	//Instruction 2 Load a 1...100 to  reg 10001
+	p.MEM.bytes[11] <= 8'b10000010;
+	p.MEM.bytes[10] <= 8'b00111111;
+	p.MEM.bytes[9] <= 8'b00000000;
+	p.MEM.bytes[8] <= 8'b00101000;
+
+	//Instruction 3 Load element of array to reg 1
+	p.MEM.bytes[15] <= 8'b10001100;
+	p.MEM.bytes[14] <= 8'b00111111;
+	p.MEM.bytes[13] <= 8'b00000000;
+	p.MEM.bytes[12] <= 8'b00101100;
+
+	//Instruction 4 Add reg 2 + 1 to reg 2
+	p.MEM.bytes[19] <= 8'b00000000;
+	p.MEM.bytes[18] <= 8'b01000001;
+	p.MEM.bytes[17] <= 8'b00010000;
+	p.MEM.bytes[16] <= 8'b00000000;
+
+	//Instruction 4 Add reg 0 + 10001 to reg 10001
+	p.MEM.bytes[23] <= 8'b00000000;
+	p.MEM.bytes[22] <= 8'b00010001;
+	p.MEM.bytes[21] <= 8'b10001000;
+	p.MEM.bytes[20] <= 8'b00000000;
+
+	//Instruction 4 Add reg 0 + 10001 to reg 10001
+	p.MEM.bytes[27] <= 8'b00010110;
+	p.MEM.bytes[26] <= 8'b00100000;
+	p.MEM.bytes[25] <= 8'b00000000;
+	p.MEM.bytes[24] <= 8'b00000100;
+
+	//Instruction 4 Add bnz
+	p.MEM.bytes[31] <= 8'b00010110;
+	p.MEM.bytes[30] <= 8'b00111111;
+	p.MEM.bytes[29] <= 8'b00000000;
+	p.MEM.bytes[28] <= 8'b00100010;
+	
+	//DATA
+	p.MEM.bytes[35] <= 8'b00000000;
+	p.MEM.bytes[34] <= 8'b00000000;
+	p.MEM.bytes[33] <= 8'b00000000;
+	p.MEM.bytes[32] <= 8'b00000001;
+
+	p.MEM.bytes[39] <= 8'b00000000;
+	p.MEM.bytes[38] <= 8'b00000000;
+	p.MEM.bytes[37] <= 8'b00000000;
+	p.MEM.bytes[36] <= 8'b00000100;
+
+	p.MEM.bytes[43] <= 8'b11111111;
+	p.MEM.bytes[42] <= 8'b11111111;
+	p.MEM.bytes[41] <= 8'b11111111;
+	p.MEM.bytes[40] <= 8'b11111100;
+
+	p.MEM.bytes[47] <= 8'b00000000;
+	p.MEM.bytes[46] <= 8'b00000000;
+	p.MEM.bytes[45] <= 8'b00000000;
+	p.MEM.bytes[44] <= 8'b00000101;
+
+	clk <=0;
+	p.F.pc <= 0;
 end
 
 always begin

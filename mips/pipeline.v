@@ -40,13 +40,13 @@ wire[31:0] rs_data_D, rs_data_EX, rs_data_WBTL;
 wire[31:0] rt_data_D, rt_data_EX;
 wire[31:0] reg_write_data;
 
-wire imiss, ifill, dmiss, dfill; //cache wires
+wire imiss, ifill, dmiss, dfill, dcache_miss, mem_instruction; //cache wires
 wire [4:0] fill_idx;
 wire [63:0] mem_stream;
 
 wire ROB_stall;
 
-wire[31:0] addr_TL, addr_C;
+wire[31:0] addr_TL, addr_C, load_C, val_in;
 
 //ROB wires
 wire[2:0] rob_index_F, rob_index_D, rob_index_EX, rob_index_L, rob_index_C, rob_index_WB, rob_index_S1, rob_index_S2, rob_index_S3, rob_index_S4;
@@ -56,8 +56,39 @@ wire IRB_we, store_ROB;
 
 assign addr_TL = (store_ROB)?addr_ROB:result_WBTL; //Address to lookup in case of store or load
 
+assign mem_instruction = mem_write_WBTL | mem_reg_write_WBTL;
+assign dmiss = dcache_miss & mem_instruction;
 //TMP
-assign stall = 1;
+
+exceptions exception_unit(
+	.clk(clk),
+	.dmiss(dmiss),
+	.imiss(imiss),
+	.dfill(dfill),
+	.ifill(ifill),
+	.jump(jump),
+
+	.IFID_we(IFID_we),
+	.IDEX_we(IDEX_we),
+	.EX_WBTL_we(EXWBTL_we),
+	.TLC_we(TLC_we),
+	.CWB_we(CWB_we),
+	.EXS1_we(EXS1_we),
+	.S12_we(S12_we),
+	.S23_we(S23_we),
+	.S34_we(S34_we),
+
+	.IFID_reset(IFID_reset),
+	.IDEX_reset(IDEX_reset),
+	.EX_WBTL_reset(EXWBTL_reset),
+	.TLC_reset(TLC_reset),
+	.CWB_reset(CWB_reset),
+	.EXS1_reset(EXS1_reset),
+	.S12_reset(S12_reset),
+	.S23_reset(S23_reset),
+	.S34_reset(S34_reset),
+	.pc_we(pc_we)
+);
 
 reorder_buffer ROB(
 	.clk(clk),
@@ -94,7 +125,7 @@ reorder_buffer ROB(
 	.addr_out(addr_ROB),
 
 	.tail_out(rob_index_F),
-	.next_head(!store_ROB | !dmiss | 1'd1)
+	.next_head(!store_ROB | !dmiss)
 );
 
 
@@ -149,7 +180,9 @@ ID_EX IDEX(
 	.baddr_in(baddr_D),
 	.baddr_out(baddr_EX),
 	.rob_index_in(rob_index_D),
-	.rob_index_out(rob_index_EX)
+	.rob_index_out(rob_index_EX),
+	.word_in(word_D),
+	.word_out(word_EX)
 );
 
 EX_WBTL EXWBTL(
@@ -174,7 +207,9 @@ EX_WBTL EXWBTL(
 	.mem_reg_write_in(mem_reg_write_EX),
 	.mem_write_out(mem_write_WBTL),
 	.alu_reg_write_out(alu_reg_write_WBTL),
-	.mem_reg_write_out(mem_write_WBTL),
+	.mem_reg_write_out(mem_reg_write_WBTL),
+	.word_in(word_EX),
+	.word_out(word_WBTL),
 
 	.rob_index_in(rob_index_EX),
 	.rob_index_out(rob_index_L)
@@ -200,6 +235,8 @@ TL_C TLC(
 	.mem_reg_write_in(mem_reg_write_WBTL),
 	.mem_write_out(mem_write_C),
 	.mem_reg_write_out(mem_reg_write_C),
+	.word_in(word_WBTL),
+	.word_out(word_C),
 	.rob_index_in(rob_index_L),
 	.rob_index_out(rob_index_C)
 );
@@ -208,30 +245,17 @@ C_WB CWB(
 	.clk(clk),
 	.we(CWB_we),
 	.reset(CWB_reset),
-	.val_in(val_C),
+	.val_in(load_C),
 	.val_out(val_WB),
 	.rd_in(rd_C),
 	.rd_out(rd_WB),
 	.write_in(mem_reg_write_C),
 	.write_out(write_WB),
 	.rob_index_in(rob_index_C),
-	.rob_index_out(rob_index_WB)
+	.rob_index_out(rob_index_WB),
+	.pc_in(pc_C),
+	.pc_out(pc_WB)
 );
-
-/*
-module dcache(
-  input clk,
-  input [31:0] data_in, //Input data to write 
-  input [63:0] data_mem, //Full line (from memory)
-  input [4:0] idx_mem, //Line to write from memory
-  input [4:0] idx, //Line on the cache
-  input [2:0] idb, //Byte on the line
-  input we, //Write enabled (miss and store)
-  input fill, //Fill from memory
-  input word, //Read byte
-  output[31:0] data_out //Output data for reads
-);
-*/
 
 /* STUFF FOR THE SLOW INSTRUCTION */
 
@@ -257,8 +281,19 @@ exec EX(
 
 //LOAD FOLLOWS STORE APPROACH
 
-tags TL(.tag(addr_TL[31:8]), .idx(addr_TL[9:5]), .miss(dmiss));
+tags TL(.clk(clk), .tag(addr_TL[31:8]), .idx(addr_TL[7:3]), .miss(dcache_miss), .fill(dfill));
 
+dcache C(
+	.clk(clk),
+	.data_in(val_C), //Input data to write 
+  	.data_mem(mem_stream), //Full line (from memory)
+  	.idx(addr_C[7:3]), //Line on the cache
+  	.idb(addr_C[2:0]), //Byte on the line
+  	.we(mem_write_C), //Write enabled (miss and store)
+  	.fill(dfill), //Fill from memory
+  	.word(word_C), //Read byte
+  	.data_out(load_C) //Output data for reads
+);
 
 decode D(
 	.inst(inst_D),
@@ -269,6 +304,7 @@ decode D(
 	.mem_reg_write(mem_reg_write_D),
 	.long_write(long_write_D),
 	.branch(branch_D),
+	.word(word_D),
 
 	.rs(rs_D),
 	.rt(rt_D),

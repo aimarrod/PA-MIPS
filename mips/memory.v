@@ -20,7 +20,7 @@ module memory(
 
   assign data = tmpd2;
   assign ifill = tmpif2;
-  assign dmiss = tmpdf2;
+  assign dfill = tmpdf2;
 
   always @(posedge clk)
   // Write register.
@@ -34,7 +34,14 @@ module memory(
       tmpif0 <= 1;
     end
     
-    tmpd1 <= { {8{bytes[arq+7]}}, {8{bytes[arq+6]}}, {8{bytes[arq+5]}}, {8{bytes[arq+4]}}, {8{bytes[arq+3]}}, {8{bytes[arq+2]}}, {8{bytes[arq+1]}}, {8{bytes[arq]}}};
+    tmpd1[7:0] <= bytes[arq];    
+    tmpd1[15:8] <= bytes[arq+1];
+    tmpd1[23:16] <= bytes[arq+2];
+    tmpd1[31:24] <= bytes[arq+3];
+    tmpd1[39:32] <= bytes[arq+4];
+    tmpd1[47:40] <= bytes[arq+5];
+    tmpd1[55:48] <= bytes[arq+6];
+    tmpd1[63:56] <= bytes[arq+7];
     tmpd2 <= tmpd1;
 
     if(tmpif0) begin
@@ -50,8 +57,14 @@ module memory(
       tmpdf0 <= 0;
     end
     if(tmpdf1) begin
-      tmpdf2 <= tmpif1;
+      tmpdf2 <= tmpdf1;
       tmpdf1 <= 0;
+    end
+    if(tmpdf2) begin
+      tmpdf2 <= 0;
+    end
+    if(tmpif2) begin
+      tmpif2 <= 0;
     end
 
   end

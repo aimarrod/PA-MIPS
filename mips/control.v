@@ -5,7 +5,8 @@ module control(
 	output alu_reg_write,
 	output mem_reg_write,
 	output long_write,
-	output branch
+	output branch,
+	output word
 );
 
 

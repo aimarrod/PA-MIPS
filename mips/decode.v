@@ -5,6 +5,7 @@ module decode(
 	output alu_reg_write,
 	output mem_reg_write,
 	output long_write,
+	output word,
 	output branch,
 	output[4:0] rs,
 	output[4:0] rt,
@@ -21,7 +22,8 @@ control c(
 	.alu_reg_write(alu_reg_write),
 	.mem_reg_write(mem_reg_write),
 	.long_write(long_write),
-	.branch(branch)
+	.branch(branch),
+	.word(word)
 );
 
 assign rs = inst[25:21];

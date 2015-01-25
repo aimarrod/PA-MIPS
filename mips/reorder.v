@@ -37,23 +37,23 @@ module reorder_buffer(
 );
 
 reg[2:0] head, tail;
-reg valid[2:0];
-reg[31:0] value[2:0], epc[2:0];
-reg exception[2:0];
+reg valid[7:0];
+reg[31:0] value[7:0], epc[7:0];
+reg exception[7:0];
 
 //Load values
-reg[4:0] rd[2:0];
+reg[4:0] rd[7:0];
 
 //Store values
-reg store[2:0];
-reg[31:0] address[2:0];
+reg store[7:0];
+reg[31:0] address[7:0];
 
 assign val_out = value[head];
 assign rd_out = store[head];
 assign we = valid[head];
 
 assign store_out = store[head];
-assign address_out = address[head];
+assign addr_out = address[head];
 assign tail_out = tail;
 
 always @(posedge clk) begin
@@ -97,6 +97,71 @@ end
 initial begin
 	tail <= 0;
 	head <= 0;
+
+	valid[0] <= 0;
+	value[0] <= 0;
+	epc[0] <= 0;
+	exception[0] <= 0;
+	rd[0] <= 0;
+	store[0] <= 0;
+	address[0] <= 0;
+
+	valid[1] <= 0;
+	value[1] <= 0;
+	epc[1] <= 0;
+	exception[1] <= 0;
+	rd[1] <= 0;
+	store[1] <= 0;
+	address[1] <= 0;
+
+	valid[2] <= 0;
+	value[2] <= 0;
+	epc[2] <= 0;
+	exception[2] <= 0;
+	rd[2] <= 0;
+	store[2] <= 0;
+	address[2] <= 0;
+
+	valid[3] <= 0;
+	value[3] <= 0;
+	epc[3] <= 0;
+	exception[3] <= 0;
+	rd[3] <= 0;
+	store[3] <= 0;
+	address[3] <= 0;
+
+	valid[4] <= 0;
+	value[4] <= 0;
+	epc[4] <= 0;
+	exception[4] <= 0;
+	rd[4] <= 0;
+	store[4] <= 0;
+	address[4] <= 0;
+
+	valid[5] <= 0;
+	value[5] <= 0;
+	epc[5] <= 0;
+	exception[5] <= 0;
+	rd[5] <= 0;
+	store[5] <= 0;
+	address[5] <= 0;
+
+	valid[6] <= 0;
+	value[6] <= 0;
+	epc[6] <= 0;
+	exception[6] <= 0;
+	rd[6] <= 0;
+	store[6] <= 0;
+	address[6] <= 0;
+
+	valid[7] <= 0;
+	value[7] <= 0;
+	epc[7] <= 0;
+	exception[7] <= 0;
+	rd[7] <= 0;
+	store[7] <= 0;
+	address[7] <= 0;
+
 end
 
 endmodule
