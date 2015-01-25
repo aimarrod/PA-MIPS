@@ -6,20 +6,26 @@ module IF_ID(
 	input[31:0] inst_in, 
 	output [31:0] inst_out,
 	input[31:0] pc_in,
-	output[31:0] pc_out
+	output[31:0] pc_out,
+
+	input[2:0] rob_index_in,
+	output[2:0] rob_index_out
 );
 
 reg[31:0] inst;
 reg[31:0] pc;
+reg[2:0] rob_index;
 
 assign inst_out = inst;
 assign pc_out = pc; 
+assign rob_index_out = rob_index;
 
 always @(posedge clk)
 begin
 	if(we) begin
-			inst <= inst_in;
-			pc <= pc_in;
+		inst <= inst_in;
+		pc <= pc_in;
+		rob_index <= rob_index_in;
 	end
 	if(reset) begin
 		inst <= 0;
@@ -64,15 +70,19 @@ module ID_EX(
 	input[11:0] aluop_in,
 	output[11:0] aluop_out,
 	input[20:0] baddr_in,
-	output[20:0] baddr_out
+	output[20:0] baddr_out,
+
+	input[2:0] rob_index_in,
+	output[2:0] rob_index_out
 );
 
-reg[4:0] rd, rs;
-reg[31:0] imm, rs_data, rt_data;
+reg [4:0] rd, rs;
+reg [31:0] imm, rs_data, rt_data;
 reg mem_write, alu_src, alu_reg_write, mem_reg_write, long_write, branch;
 reg [31:0] pc;
 reg [11:0] aluop;
 reg [20:0] baddr;
+reg [2:0] rob_index;
 
 assign rs_data_out = rs_data;
 assign rt_data_out = rt_data;
@@ -90,6 +100,7 @@ assign long_write_out = long_write;
 assign branch_out = branch;
 
 assign pc_out = pc;
+assign rob_index_out = rob_index;
 
 always @(posedge clk)
 begin
@@ -111,6 +122,7 @@ begin
 		aluop <= aluop_in;
 		
 		pc <= pc_in;
+		rob_index <= rob_index_in;
 	end
 	if(reset) begin
 		rs_data <= 0;
@@ -151,19 +163,22 @@ module EX_WBTL(
 	input[31:0] rs_data_in,
 	output[31:0] rs_data_out,
 
-	input mem_write_in;
+	input mem_write_in,
 	input alu_reg_write_in,
 	input mem_reg_write_in,
-	input long_write_in,
 	output mem_write_out,
 	output alu_reg_write_out,
 	output mem_reg_write_out,
-	output long_write_out,
-)
+
+	input[2:0] rob_index_in,
+	output[2:0] rob_index_out
+);
 
 reg[4:0] rd, rs;
-reg mem_write, alu_src, alu_reg_write, mem_reg_write, long_write, branch;
+reg mem_write, alu_src, alu_reg_write, mem_reg_write, branch;
 reg [31:0] pc, alu_result, rs_data;
+reg [2:0] rob_index;
+
 
 assign rs_data_out = rs_data;
 assign alu_result_out = alu_result;
@@ -173,9 +188,9 @@ assign rs_out = rs;
 assign mem_write_out = mem_write;
 assign alu_reg_write_out = alu_reg_write;
 assign mem_reg_write_out = mem_reg_write;
-assign long_write_out = long_write;
 
 assign pc_out = pc;
+assign rob_index_out = rob_index;
 
 always @(posedge clk)
 begin
@@ -188,9 +203,9 @@ begin
 		mem_write <= mem_write_in;
 		alu_reg_write <= alu_reg_write_in;
 		mem_reg_write <= mem_reg_write_in;
-		long_write <= long_write_in;
 
 		pc <= pc_in;
+		rob_index <= rob_index_in;
 	end
 	if(reset) begin
 		rs <= 0;
@@ -201,9 +216,170 @@ begin
 		mem_write <= 0;
 		alu_reg_write <= 0;
 		mem_reg_write <= 0;
-		long_write <= 0;
+		pc <= 0;
+	end
+end
+
+endmodule
+
+module TL_C(
+	input clk, 
+	input we, 
+	input reset,
+
+	input[31:0] pc_in,
+	output[31:0] pc_out,
+
+	input[31:0] addr_in,
+	output[31:0] addr_out,
+	input[31:0] val_in,
+	output[31:0] val_out,
+	input[4:0] rd_in,
+	output[4:0] rd_out,
+
+	input mem_write_in,
+	output mem_write_out,
+
+	input mem_reg_write_in,
+	output mem_reg_write_out,
+
+	input[2:0] rob_index_in,
+	output[2:0] rob_index_out
+);
+
+reg mem_write, mem_reg_write, alu_reg_write;
+reg[31:0] pc, addr, val;
+reg[4:0] rd;
+reg[2:0] rob_index;
+
+assign mem_write_out = mem_write;
+assign mem_reg_write_out = mem_reg_write;
+
+assign addr_out = addr;
+assign val_out = val;
+assign rd_out = rd;
+
+assign pc_out = pc;
+assign rob_index_out = rob_index;
+
+always @(posedge clk)
+begin
+	if(we) begin
+		mem_write <= mem_write_in;
+		mem_reg_write <= mem_reg_write_in;
+
+		addr <= addr_in;
+		val <= val_in;
+		rd <= rd_in;
+
+		pc <= pc_in;
+		rob_index <= rob_index_in;
+	end
+	if(reset) begin
+		mem_write <= 0;
+		mem_reg_write <= 0;
+
+		addr <= 0;
+		val <= 0;
+		rd <= 0;
 
 		pc <= 0;
 	end
+end
+
+endmodule
+
+module C_WB(
+	input clk,
+	input we,
+	input reset,
+
+	input[31:0] val_in,
+	output[31:0] val_out,
+
+	input[4:0] rd_in,
+	input[4:0] rd_out,
+
+	input write_in,
+	output write_out,
+
+	input[2:0] rob_index_in,
+	output[2:0] rob_index_out
+);
+
+reg[31:0] val;
+reg[4:0] rd;
+reg write;
+reg[2:0] rob_index;
+
+
+assign write_out = write;
+assign rd_out = rd;
+assign val_out = val;
+assign rob_index_out = rob_index;
+
+always @(posedge clk) begin
+	if(we) begin
+		val <= val_in;
+		rd <= rd_in;
+		write <= write_in;
+		rob_index <= rob_index_in;
+	end
+	if(reset) begin
+		val <= 0;
+		rd <= 0;
+		write <= 0;
+	end
+end
+
+endmodule
+
+/* SLOW INSTRUCTION REGS */
+
+module SLREG(
+	input clk,
+	input we,
+	input reset,
+
+	input[31:0] pc_in,
+	input[31:0] value_in,
+	input[4:0] rd_in,
+	input[2:0] rob_index_in,
+	input write_in,
+
+	output[31:0] pc_out,
+	output[31:0] value_out,
+	output[4:0] rd_out,
+	output[2:0] rob_index_out,
+	output write_out
+);
+
+reg[31:0] pc, value;
+reg[5:0] rd;
+reg[2:0] rob_index;
+reg write;
+
+assign pc_out = pc;
+assign value_out = value;
+assign rd_out = rd;
+assign rob_index_out = rob_index;
+assign write_out = write; 
+
+always @(posedge clk) begin
+	if(we) begin
+		pc <= pc_in;
+		value <= value_in;
+		rd <= rd_in;
+		write <= write_in;
+		rob_index <= rob_index_in;
+	end
+	if(reset) begin
+		pc <= 0;
+		value <= 0;
+		rd <= 0;
+		write <= 0;
+		rob_index <= 0;
+	end
+end
 
 endmodule

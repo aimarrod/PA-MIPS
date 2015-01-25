@@ -6,7 +6,6 @@ module fetch(
 	input pc_write,
 
 	input fill,
-	input[4:0] fill_idx,
 	input[63:0] stream,
 
 	output [31:0] inst,
@@ -16,7 +15,7 @@ module fetch(
 
 reg[31:0] pc;
 tags t(.tag(pc[31:8]), .idx(pc[9:5]), .miss(miss));
-icache c(.clk(clk), .idx(pc[7:3]), .idb(pc[2:0]), .data_out(inst), .fill(fill), .idx_mem(fill_idx), .data_mem(stream));
+icache c(.clk(clk), .idx(pc[7:3]), .idb(pc[2:0]), .data_out(inst), .fill(fill), .data_mem(stream));
 
 assign pc_out = pc;
 

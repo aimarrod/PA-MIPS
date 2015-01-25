@@ -5,15 +5,14 @@ module tags(
 );
 	
 reg[23:0] tagList[31:0]; //Tag list (32 tags)
-assign miss = (tagList[idx] == tag);
+assign miss = (tagList[idx] != tag);
 
 endmodule
-
+  
 module dcache(
   input clk,
   input [31:0] data_in, //Input data to write 
   input [63:0] data_mem, //Full line (from memory)
-  input [4:0] idx_mem, //Line to write from memory
   input [4:0] idx, //Line on the cache
   input [2:0] idb, //Byte on the line
   input we, //Write enabled (miss and store)
@@ -43,14 +42,14 @@ module dcache(
     end
   end 
   if(fill) begin
-      data[idx_mem][0] <= data_mem[7:0];
-      data[idx_mem][1] <= data_mem[15:8];
-      data[idx_mem][2] <= data_mem[23:16];
-      data[idx_mem][3] <= data_mem[31:24];
-      data[idx_mem][4] <= data_mem[39:32];
-      data[idx_mem][5] <= data_mem[47:40];
-      data[idx_mem][6] <= data_mem[55:48];
-      data[idx_mem][7] <= data_mem[63:56];
+      data[idx][0] <= data_mem[7:0];
+      data[idx][1] <= data_mem[15:8];
+      data[idx][2] <= data_mem[23:16];
+      data[idx][3] <= data_mem[31:24];
+      data[idx][4] <= data_mem[39:32];
+      data[idx][5] <= data_mem[47:40];
+      data[idx][6] <= data_mem[55:48];
+      data[idx][7] <= data_mem[63:56];
     end
  end
 
@@ -59,7 +58,6 @@ endmodule
 module icache(
   input clk,
   input [63:0] data_mem, //Full line (from memory)
-  input [4:0] idx_mem, //Line to write from memory
   input [4:0] idx, //Line on the cache
   input [2:0] idb, //Byte on the line
   input fill, //Fill from memory
@@ -77,14 +75,14 @@ module icache(
  begin
   if(fill)
     begin
-      data[idx_mem][0] <= data_mem[7:0];
-      data[idx_mem][1] <= data_mem[15:8];
-      data[idx_mem][2] <= data_mem[23:16];
-      data[idx_mem][3] <= data_mem[31:24];
-      data[idx_mem][4] <= data_mem[39:32];
-      data[idx_mem][5] <= data_mem[47:40];
-      data[idx_mem][6] <= data_mem[55:48];
-      data[idx_mem][7] <= data_mem[63:56];
+      data[idx][0] <= data_mem[7:0];
+      data[idx][1] <= data_mem[15:8];
+      data[idx][2] <= data_mem[23:16];
+      data[idx][3] <= data_mem[31:24];
+      data[idx][4] <= data_mem[39:32];
+      data[idx][5] <= data_mem[47:40];
+      data[idx][6] <= data_mem[55:48];
+      data[idx][7] <= data_mem[63:56];
     end
  end
 
