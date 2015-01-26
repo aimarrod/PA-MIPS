@@ -1,0 +1,1322 @@
+# Loading project pa
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+vsim pa-processor.test
+# vsim pa-processor.test 
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.tags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.TLB
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+# ** Warning: (vsim-3017) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(431): [TFMPC] - Too few port connections. Expected 10, found 9.
+#         Region: /test/p/F
+# ** Warning: (vsim-3722) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(431): [TFMPC] - Missing connection for port 'tlbmiss'.
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/fetch.v(27): [PCDPC] - Port size (24 or 24) does not match connection size (486) for port 'tag'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/cache.v(3).
+#         Region: /test/p/F/t
+add wave -position end  sim:/test/p/F/pc
+add wave -position end  sim:/test/p/F/tlb/exception
+add wave -position end  sim:/test/p/F/tlb/virtual
+add wave -position end  sim:/test/p/F/tlb/physical
+add wave -position end  sim:/test/p/F/t/tag
+run 2000
+add wave -position end  sim:/test/p/F/tlb/translations
+restart -f
+# ** Warning: (vsim-3017) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(431): [TFMPC] - Too few port connections. Expected 10, found 9.
+#         Region: /test/p/F
+# ** Warning: (vsim-3722) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(431): [TFMPC] - Missing connection for port 'tlbmiss'.
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/fetch.v(27): [PCDPC] - Port size (24 or 24) does not match connection size (486) for port 'tag'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/cache.v(3).
+#         Region: /test/p/F/t
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.tags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.TLB
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+# ** Warning: (vsim-3017) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(431): [TFMPC] - Too few port connections. Expected 10, found 9.
+#         Region: /test/p/F
+# ** Warning: (vsim-3722) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(431): [TFMPC] - Missing connection for port 'tlbmiss'.
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.tags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.TLB
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+add wave -position end  sim:/test/p/F/tlb/exception
+add wave -position end  sim:/test/p/F/tlb/match
+restart -f
+run 2000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.tags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.TLB
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.tags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.TLB
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.tags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.TLB
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.tags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.TLB
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.tags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.TLB
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v failed with 1 errors.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 1 failed with 1 error. 
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.tags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+# Compile of cache.v failed with 2 errors.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v failed with 1 errors.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 2 failed with 3 errors. 
+# Compile of cache.v failed with 2 errors.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 1 failed with 2 errors. 
+# Compile of cache.v failed with 1 errors.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 1 failed with 1 error. 
+# Compile of cache.v failed with 1 errors.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 1 failed with 1 error. 
+# Compile of cache.v failed with 1 errors.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 1 failed with 1 error. 
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+# ** Warning: (vsim-3017) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(391): [TFMPC] - Too few port connections. Expected 12, found 11.
+#         Region: /test/p/C
+# ** Warning: (vsim-3722) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(391): [TFMPC] - Missing connection for port 'data_mem_out'.
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(458): [PCDPC] - Port size (32 or 32) does not match connection size (31) for port 'addr_in'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/memory.v(15).
+#         Region: /test/p/MEM
+run 2000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+run 2000
+add wave -position end  sim:/test/p/ROB/store
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+# ** Warning: (vsim-3017) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(391): [TFMPC] - Too few port connections. Expected 12, found 11.
+#         Region: /test/p/C
+# ** Warning: (vsim-3722) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(391): [TFMPC] - Missing connection for port 'data_mem_out'.
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(458): [PCDPC] - Port size (32 or 32) does not match connection size (31) for port 'addr_in'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/memory.v(15).
+#         Region: /test/p/MEM
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(458): [PCDPC] - Port size (32 or 32) does not match connection size (31) for port 'addr_in'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/memory.v(15).
+#         Region: /test/p/MEM
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+add wave -position end  sim:/test/p/D/mem_write
+restart -f
+run 2000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+add wave -position end  sim:/test/p/ROB/address[0]
+restart -f
+run 2000
+add wave -position end  sim:/test/p/MEM/bytes[60]
+add wave -position end  sim:/test/p/MEM/bytes[61]
+add wave -position end  sim:/test/p/MEM/bytes[62]
+add wave -position end  sim:/test/p/MEM/bytes[63]
+add wave -position end  sim:/test/p/MEM/bytes[64]
+add wave -position end  sim:/test/p/MEM/bytes[65]
+add wave -position end  sim:/test/p/MEM/bytes[66]
+add wave -position end  sim:/test/p/MEM/bytes[67]
+restart -f
+run 2000
+add wave -position end  sim:/test/p/store_ROB
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+add wave -position end  sim:/test/p/C/data
+add wave -position 6  sim:/test/p/C/idx
+restart -f
+run 2000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+add wave -position end  sim:/test/p/addr_ROB
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+add wave -position end  sim:/test/p/addr_TL
+add wave -position 8  sim:/test/p/physical_TL
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+add wave -position end  sim:/test/p/TLC/addr
+restart -f
+run 2000
+add wave -position end  sim:/test/p/TLC/mem_write
+restart -f
+run 2000
+add wave -position end  sim:/test/p/C/data_in
+add wave -position end  sim:/test/p/C/idx
+add wave -position end  sim:/test/p/C/idb
+add wave -position end  sim:/test/p/C/word
+restart -f
+run 2000
+add wave -position end  sim:/test/p/C/data[7]
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 2000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v failed with 1 errors.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v failed with 1 errors.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v failed with 1 errors.
+# Compile of forwarding.v was successful.
+# 13 compiles, 3 failed with 3 errors. 
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v failed with 1 errors.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 1 failed with 1 error. 
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v failed with 1 errors.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 1 failed with 1 error. 
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v failed with 1 errors.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 1 failed with 1 error. 
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exception_regs
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+# ** Warning: (vsim-3008) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(80): [CNNODP] - Component name (pc_next) is not on a downward path.
+#         Region: /test/p
+# ** Error: (vsim-3043) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(80): Unresolved reference to 'pc_next' in F.pc_next.
+#         Region: /test/p
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iD'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(127).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iC'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(130).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iWB'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(131).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iS1'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(132).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iS2'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(133).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iS3'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(134).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iS4'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(135).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iS5'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(136).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(395): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'addr_out'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/pipeline_regs.v(379).
+#         Region: /test/p/CWB
+step -current
+# Active dataset is not in simulation mode
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# No Design Loaded!
+vsim pa-processor.test
+# vsim pa-processor.test 
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exception_regs
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+# ** Warning: (vsim-3008) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(80): [CNNODP] - Component name (pc_next) is not on a downward path.
+#         Region: /test/p
+# ** Error: (vsim-3043) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(80): Unresolved reference to 'pc_next' in F.pc_next.
+#         Region: /test/p
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iD'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(127).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iC'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(130).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iWB'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(131).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iS1'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(132).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iS2'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(133).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iS3'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(134).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iS4'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(135).
+#         Region: /test/p/eregs
+# ** Warning: (vsim-3015) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(114): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'iS5'. The port definition is at: /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v(136).
+#         Region: /test/p/eregs
+# Error loading design
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+vsim pa-processor.test
+# vsim pa-processor.test 
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exception_regs
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+# ** Warning: (vsim-3008) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(80): [CNNODP] - Component name (pc_next) is not on a downward path.
+#         Region: /test/p
+# ** Error: (vsim-3043) /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v(80): Unresolved reference to 'pc_next' in F.pc_next.
+#         Region: /test/p
+# Error loading design
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+vsim pa-processor.test
+# vsim pa-processor.test 
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exception_regs
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 6000
+add wave -position 1  sim:/test/p/ex
+restart -f
+run 6000
+add wave -position 2  sim:/test/p/itlb_miss
+add wave -position 3  sim:/test/p/dtlb_miss
+add wave -position 4  sim:/test/p/overflow_EX
+restart -f
+run 6000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exception_regs
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 4000
+add wave -position end  sim:/test/p/EX/ALU/op_1
+add wave -position end  sim:/test/p/EX/ALU/op_2
+restart -f
+run 4000
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+run 40000
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exception_regs
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 4000
+add wave -position end  sim:/test/p/C/clk
+add wave -position end  sim:/test/p/C/data_in
+add wave -position end  sim:/test/p/C/data_mem
+add wave -position end  sim:/test/p/C/idx
+add wave -position end  sim:/test/p/C/fidx
+add wave -position end  sim:/test/p/C/idb
+add wave -position end  sim:/test/p/C/we
+add wave -position end  sim:/test/p/C/fill
+add wave -position end  sim:/test/p/C/word
+add wave -position end  sim:/test/p/C/data_out
+add wave -position end  sim:/test/p/C/data_mem_in
+add wave -position end  sim:/test/p/C/data
+add wave -position end  sim:/test/p/IRB/regs
+# Compile of cache.v was successful.
+# Compile of control.v was successful.
+# Compile of decode.v was successful.
+# Compile of exec.v was successful.
+# Compile of fetch.v was successful.
+# Compile of pipeline.v was successful.
+# Compile of pipeline_regs.v was successful.
+# Compile of registerbank.v was successful.
+# Compile of test.v was successful.
+# Compile of reorder.v was successful.
+# Compile of memory.v was successful.
+# Compile of exception_unit.v was successful.
+# Compile of forwarding.v was successful.
+# 13 compiles, 0 failed with no errors. 
+restart -f
+# Loading pa-processor.test
+# Loading pa-processor.pipeline
+# Loading pa-processor.exception_regs
+# Loading pa-processor.exceptions
+# Loading pa-processor.bypasses
+# Loading pa-processor.reorder_buffer
+# Loading pa-processor.IF_ID
+# Loading pa-processor.ID_EX
+# Loading pa-processor.EX_WBTL
+# Loading pa-processor.TL_C
+# Loading pa-processor.C_WB
+# Loading pa-processor.SLREG
+# Loading pa-processor.exec
+# Loading pa-processor.alu
+# Loading pa-processor.TLB
+# Loading pa-processor.dtags
+# Loading pa-processor.dcache
+# Loading pa-processor.decode
+# Loading pa-processor.control
+# Loading pa-processor.register_bank
+# Loading pa-processor.fetch
+# Loading pa-processor.tags
+# Loading pa-processor.icache
+# Loading pa-processor.memory
+run 4000
+restart -f
+run 6000
+add wave -position end  sim:/test/p/IFID/pc
+add wave -position end  sim:/test/p/IDEX/pc
+add wave -position end  sim:/test/p/EXWBTL/pc
+add wave -position end  sim:/test/p/TLC/pc
+add wave -position end  sim:/test/p/CWB/pc
+add wave -position end  sim:/test/p/EXS1/pc
+add wave -position end  sim:/test/p/S12/pc
+add wave -position end  sim:/test/p/S23/pc
+add wave -position end  sim:/test/p/S34/pc
+restart -f
+run 4000
+add wave -position 0  sim:/test/p/clk
+add wave -position end  sim:/test/p/imiss
+add wave -position end  sim:/test/p/dmiss
+restart -f
+run 4000

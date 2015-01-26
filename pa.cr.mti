@@ -1,0 +1,106 @@
+/home/obzzidian/Projects/PA-MIPS/mips/exec.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/exec.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module exec
+-- Compiling module alu
+
+Top level modules:
+	exec
+
+} {} {}} /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module exceptions
+-- Compiling module exception_regs
+
+Top level modules:
+	exceptions
+	exception_regs
+
+} {} {}} /home/obzzidian/Projects/PA-MIPS/mips/pipeline_regs.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/pipeline_regs.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module IF_ID
+-- Compiling module ID_EX
+-- Compiling module EX_WBTL
+-- Compiling module TL_C
+-- Compiling module C_WB
+-- Compiling module SLREG
+
+Top level modules:
+	IF_ID
+	ID_EX
+	EX_WBTL
+	TL_C
+	C_WB
+	SLREG
+
+} {} {}} /home/obzzidian/Projects/PA-MIPS/mips/test.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/test.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} /home/obzzidian/Projects/PA-MIPS/mips/memory.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/memory.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} /home/obzzidian/Projects/PA-MIPS/mips/control.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/control.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} /home/obzzidian/Projects/PA-MIPS/mips/registerbank.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/registerbank.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module register_bank
+
+Top level modules:
+	register_bank
+
+} {} {}} /home/obzzidian/Projects/PA-MIPS/mips/reorder.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/reorder.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module reorder_buffer
+
+Top level modules:
+	reorder_buffer
+
+} {} {}} /home/obzzidian/Projects/PA-MIPS/mips/forwarding.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/forwarding.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module bypasses
+
+Top level modules:
+	bypasses
+
+} {} {}} /home/obzzidian/Projects/PA-MIPS/mips/decode.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/decode.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module decode
+
+Top level modules:
+	decode
+
+} {} {}} /home/obzzidian/Projects/PA-MIPS/mips/fetch.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/fetch.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module fetch
+
+Top level modules:
+	fetch
+
+} {} {}} /home/obzzidian/Projects/PA-MIPS/mips/cache.v {1 {vlog -work pa-processor /home/obzzidian/Projects/PA-MIPS/mips/cache.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tags
+-- Compiling module dtags
+-- Compiling module dcache
+-- Compiling module icache
+-- Compiling module TLB
+
+Top level modules:
+	tags
+	dtags
+	dcache
+	icache
+	TLB
+
+} {} {}}

@@ -1,0 +1,55 @@
+/home/obzzidian/Projects/PA-MIPS/mips/exec.v {0 {vlog -work work /home/obzzidian/Projects/PA-MIPS/mips/exec.v
+** Warning: (14) Failed to open "/home/obzzidian/Projects/PA-MIPS/processor.mpf" specified by the MODELSIM environment variable.
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vlog-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {4.0 5.0} {}} /home/obzzidian/Projects/PA-MIPS/mips/control.v {0 {vlog -work work /home/obzzidian/Projects/PA-MIPS/mips/control.v
+** Warning: (14) Failed to open "/home/obzzidian/Projects/PA-MIPS/processor.mpf" specified by the MODELSIM environment variable.
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vlog-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {4.0 5.0} {}} /home/obzzidian/Projects/PA-MIPS/mips/registerbank.v {0 {vlog -work pa_mips /home/obzzidian/Projects/PA-MIPS/mips/registerbank.v
+** Warning: (14) Failed to open "/home/obzzidian/Projects/PA-MIPS/processor.mpf" specified by the MODELSIM environment variable.
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vlog-19) Failed to access library 'pa_mips' at "pa_mips".
+No such file or directory. (errno = ENOENT)
+
+} {4.0 5.0} {}} /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v {0 {vlog -work work /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v
+** Warning: (14) Failed to open "/home/obzzidian/Projects/PA-MIPS/processor.mpf" specified by the MODELSIM environment variable.
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vlog-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {4.0 5.0} {}} /home/obzzidian/Projects/PA-MIPS/mips/pipeline_regs.v {0 {vlog -work work /home/obzzidian/Projects/PA-MIPS/mips/pipeline_regs.v
+** Warning: (14) Failed to open "/home/obzzidian/Projects/PA-MIPS/processor.mpf" specified by the MODELSIM environment variable.
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vlog-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {4.0 5.0} {}} /home/obzzidian/Projects/PA-MIPS/mips/fetch.v {0 {vlog -work work /home/obzzidian/Projects/PA-MIPS/mips/fetch.v
+** Warning: (14) Failed to open "/home/obzzidian/Projects/PA-MIPS/processor.mpf" specified by the MODELSIM environment variable.
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vlog-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {4.0 5.0} {}} /home/obzzidian/Projects/PA-MIPS/mips/cache.v {0 {vlog -work pa_mips /home/obzzidian/Projects/PA-MIPS/mips/cache.v
+** Warning: (14) Failed to open "/home/obzzidian/Projects/PA-MIPS/processor.mpf" specified by the MODELSIM environment variable.
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vlog-19) Failed to access library 'pa_mips' at "pa_mips".
+No such file or directory. (errno = ENOENT)
+
+} {4.0 5.0} {}} /home/obzzidian/Projects/PA-MIPS/mips/test.v {0 {vlog -work work /home/obzzidian/Projects/PA-MIPS/mips/test.v
+** Warning: (14) Failed to open "/home/obzzidian/Projects/PA-MIPS/processor.mpf" specified by the MODELSIM environment variable.
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vlog-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {4.0 5.0} {}} /home/obzzidian/Projects/PA-MIPS/mips/decode.v {0 {vlog -work work /home/obzzidian/Projects/PA-MIPS/mips/decode.v
+** Warning: (14) Failed to open "/home/obzzidian/Projects/PA-MIPS/processor.mpf" specified by the MODELSIM environment variable.
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vlog-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {4.0 5.0} {}}

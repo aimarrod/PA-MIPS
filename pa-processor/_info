@@ -1,0 +1,526 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/obzzidian/Projects/PA-MIPS
+valu
+Z1 !s100 _7<D=X0WAY70>n]=0T03F1
+Z2 IDF=aRg5eM6o>GQHN2Foak2
+Z3 V`]DPX?=TBRNMLJEV4N?af1
+Z4 d/home/obzzidian/Projects/PA-MIPS
+Z5 w1422239347
+Z6 8/home/obzzidian/Projects/PA-MIPS/mips/exec.v
+Z7 F/home/obzzidian/Projects/PA-MIPS/mips/exec.v
+L0 20
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s108 1422256599.783441
+Z10 !s107 /home/obzzidian/Projects/PA-MIPS/mips/exec.v|
+Z11 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/exec.v|
+Z12 o-work pa-processor -O0
+!i10b 1
+!s85 0
+!s101 -O0
+vbypasses
+!i10b 1
+Z13 !s100 nE<A0?RM`SM>fmWiM@Z`l3
+Z14 IRgD2nPH>f>oJKWW;f>4KV3
+Z15 VYkGD4V]T_?@gWlORM]TQF1
+R4
+Z16 w1422246539
+Z17 8/home/obzzidian/Projects/PA-MIPS/mips/forwarding.v
+Z18 F/home/obzzidian/Projects/PA-MIPS/mips/forwarding.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1422256600.169129
+!s107 /home/obzzidian/Projects/PA-MIPS/mips/forwarding.v|
+Z19 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/forwarding.v|
+!s101 -O0
+R12
+vC_WB
+Z20 !s100 AZeRmT?_GoU=H[_`n;KRU1
+Z21 IWJ>o@3BRc2Ij3QeIMHGfE3
+Z22 VBWKE2h`_bEohk@dfmTQo`3
+R4
+Z23 w1422255310
+Z24 8/home/obzzidian/Projects/PA-MIPS/mips/pipeline_regs.v
+Z25 F/home/obzzidian/Projects/PA-MIPS/mips/pipeline_regs.v
+Z26 L0 361
+R8
+r1
+31
+Z27 !s108 1422256599.903805
+Z28 !s107 /home/obzzidian/Projects/PA-MIPS/mips/pipeline_regs.v|
+Z29 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/pipeline_regs.v|
+R12
+Z30 n@c_@w@b
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrol
+Z31 !s100 ^LLBG4gWOZjZ5QY4`b<0=1
+Z32 I]cSgcWjJ9TOn=XJbCbU9?0
+Z33 VP`JAnli`@5[nOnB_2=Hn43
+R4
+Z34 w1422228121
+Z35 8/home/obzzidian/Projects/PA-MIPS/mips/control.v
+Z36 F/home/obzzidian/Projects/PA-MIPS/mips/control.v
+L0 1
+R8
+r1
+31
+Z37 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/control.v|
+R12
+Z38 !s108 1422256599.702758
+Z39 !s107 /home/obzzidian/Projects/PA-MIPS/mips/control.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vdcache
+Z40 !s100 6AZnBIh9gY6@9Kzla3S_>1
+Z41 I:I1_?YK62P5?Tfe?PY4WE3
+Z42 V``:bBQhLXL91^aYRCQdab1
+R4
+Z43 w1422256222
+Z44 8/home/obzzidian/Projects/PA-MIPS/mips/cache.v
+Z45 F/home/obzzidian/Projects/PA-MIPS/mips/cache.v
+Z46 L0 148
+R8
+r1
+31
+Z47 !s108 1422256599.645010
+Z48 !s107 /home/obzzidian/Projects/PA-MIPS/mips/cache.v|
+Z49 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/cache.v|
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vdecode
+Z50 !s100 Dk<G541XRGnoQ=gjaiGT>1
+Z51 IP[Sb:UzQe4:F8ZdZzVHh=3
+Z52 VPdEL?EFG@??PmCh[I^AF`1
+R4
+Z53 w1422228151
+Z54 8/home/obzzidian/Projects/PA-MIPS/mips/decode.v
+Z55 F/home/obzzidian/Projects/PA-MIPS/mips/decode.v
+L0 1
+R8
+r1
+31
+Z56 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/decode.v|
+R12
+Z57 !s108 1422256599.741932
+Z58 !s107 /home/obzzidian/Projects/PA-MIPS/mips/decode.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vdtags
+Z59 !s100 ]LO=WO58cZl7@hZPYEOi71
+Z60 I7`]XkQzSGGYC[z:lT9U[93
+Z61 VbBFKaX@1C>9>;n^9;mNB73
+R4
+R43
+R44
+R45
+L0 56
+R8
+r1
+31
+R47
+R48
+R49
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vEX_WBTL
+Z62 !s100 Ob:gNCN`PZR:T0B7FjK<`0
+Z63 I2P8=^GWK]mn>XI6=VYnQA3
+Z64 VFVj_Zh5DMmfR8K_R8NWgJ2
+R4
+R23
+R24
+R25
+Z65 L0 176
+R8
+r1
+31
+R27
+R28
+R29
+R12
+Z66 n@e@x_@w@b@t@l
+!i10b 1
+!s85 0
+!s101 -O0
+vexception_regs
+Z67 !s100 7afcg4Y1LKhccRf5b<flP3
+Z68 IbWi3i1h6@IZCcSZmYzACn2
+Z69 VKaACiF5VQ6>DmFh>S3J>10
+R4
+Z70 w1422255352
+Z71 8/home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v
+Z72 F/home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v
+Z73 L0 124
+R8
+r1
+31
+Z74 !s108 1422256600.127978
+Z75 !s107 /home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v|
+Z76 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/exception_unit.v|
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vexceptions
+Z77 !s100 ci3EOGe>l<78?Xb<gnllj3
+Z78 I5VNoz^]@cV`oK:jeZ?>VG2
+Z79 Vnd=AQQLf0XC_4z=k45:_m2
+R4
+R70
+R71
+R72
+L0 1
+R8
+r1
+31
+R74
+R75
+R76
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vexec
+Z80 !s100 ?@<G8XD8;?a0TOl?zBNAN0
+Z81 I7h`9?CUZEPIRJ3]ITomk;3
+Z82 VObfR6:1BJ798TPzbXf:i=2
+R4
+R5
+R6
+R7
+L0 1
+R8
+r1
+31
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vfetch
+Z83 !s100 kzP34mX[AA=:Y9_Xe03g41
+Z84 IB]B>0IIBTgRDET6UH?:3d1
+Z85 VTz5VP0?2X[Ig6oeKUDdY93
+R4
+Z86 w1422249829
+Z87 8/home/obzzidian/Projects/PA-MIPS/mips/fetch.v
+Z88 F/home/obzzidian/Projects/PA-MIPS/mips/fetch.v
+L0 1
+R8
+r1
+31
+Z89 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/fetch.v|
+R12
+Z90 !s108 1422256599.821829
+Z91 !s107 /home/obzzidian/Projects/PA-MIPS/mips/fetch.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vicache
+Z92 !s100 efFi1Xg=8PG<^1FG2Hoo21
+Z93 Iez_EhH8Nd5ffknMjQ?V;d0
+Z94 VC__zn6mDaGcKUKR5cZJ;n2
+R4
+R43
+R44
+R45
+Z95 L0 205
+R8
+r1
+31
+R47
+R48
+R49
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vID_EX
+Z96 !s100 FB]O_7GT?T2Qf2e8@XkGn2
+Z97 IK?i_g;_?`ES<1@oW>fPFZ1
+Z98 Vc5f9Sf`Jg9kR4D_O3miOa0
+R4
+R23
+R24
+R25
+L0 45
+R8
+r1
+31
+R27
+R28
+R29
+R12
+Z99 n@i@d_@e@x
+!i10b 1
+!s85 0
+!s101 -O0
+vIF_ID
+Z100 !s100 `nFYIzE:BIe^lL3aVc3Ed0
+Z101 IYKH6:Cm8jFN:Y`GbVN8bA1
+Z102 Vn^X?PIl:fL>?;o_`l6a7d1
+R4
+R23
+R24
+R25
+L0 1
+R8
+r1
+31
+R27
+R28
+R29
+R12
+Z103 n@i@f_@i@d
+!i10b 1
+!s85 0
+!s101 -O0
+vlookup
+Z104 I^W@Hz?CU_;fG;;18M4o5g3
+Z105 V]Q6>UT^m4<I:bmJDmCkfH0
+R4
+Z106 w1422192664
+Z107 8/home/obzzidian/Projects/PA-MIPS/mips/writeback_taglookup.v
+Z108 F/home/obzzidian/Projects/PA-MIPS/mips/writeback_taglookup.v
+L0 10
+R8
+r1
+31
+Z109 !s108 1422192679.624728
+Z110 !s107 /home/obzzidian/Projects/PA-MIPS/mips/writeback_taglookup.v|
+Z111 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/writeback_taglookup.v|
+R12
+Z112 !s100 OFh;Y2T[:0[]<F<Si`@;W2
+!i10b 1
+!s85 0
+!s101 -O0
+vmemory
+Z113 !s100 `ZSO9PWo3[?>f]KXE9aN:2
+Z114 Izc_KK5O4CeZn4<>MaEJmP0
+Z115 VG9Ig182S@VzXf3^1O5@0a0
+R4
+Z116 w1422251498
+Z117 8/home/obzzidian/Projects/PA-MIPS/mips/memory.v
+Z118 F/home/obzzidian/Projects/PA-MIPS/mips/memory.v
+L0 1
+R8
+r1
+31
+Z119 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/memory.v|
+R12
+Z120 !s108 1422256600.088920
+Z121 !s107 /home/obzzidian/Projects/PA-MIPS/mips/memory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vpipeline
+Z122 !s100 WAzA;a]IB85L9KW_Y?Sc]2
+Z123 I5ZzbmDSZGCh`e1amSBUNM3
+Z124 V7kNWS@gA0zN]bz6a<?=5=2
+R4
+Z125 w1422256429
+Z126 8/home/obzzidian/Projects/PA-MIPS/mips/pipeline.v
+Z127 F/home/obzzidian/Projects/PA-MIPS/mips/pipeline.v
+L0 1
+R8
+r1
+31
+Z128 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/pipeline.v|
+R12
+Z129 !s108 1422256599.859838
+Z130 !s107 /home/obzzidian/Projects/PA-MIPS/mips/pipeline.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vregister_bank
+Z131 !s100 1>4D8]^NI9b^7d5a@PGCf2
+Z132 IDg@SLza4?NUI[18h>n@ic3
+Z133 VQCBU`lN]0oP=3_a8S33Rf3
+R4
+Z134 w1422217837
+Z135 8/home/obzzidian/Projects/PA-MIPS/mips/registerbank.v
+Z136 F/home/obzzidian/Projects/PA-MIPS/mips/registerbank.v
+L0 1
+R8
+r1
+31
+Z137 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/registerbank.v|
+R12
+Z138 !s108 1422256599.959643
+Z139 !s107 /home/obzzidian/Projects/PA-MIPS/mips/registerbank.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vreorder_buffer
+Z140 !s100 OIFzo5H5Cn=7V=9FYE?9<2
+Z141 I1bOZQ`a61C65m_=Q;eCeB0
+Z142 VG<<99WVF41NjE7SiNCIAF1
+R4
+Z143 w1422255581
+Z144 8/home/obzzidian/Projects/PA-MIPS/mips/reorder.v
+Z145 F/home/obzzidian/Projects/PA-MIPS/mips/reorder.v
+L0 1
+R8
+r1
+31
+Z146 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/reorder.v|
+R12
+Z147 !s108 1422256600.040286
+Z148 !s107 /home/obzzidian/Projects/PA-MIPS/mips/reorder.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vSLREG
+Z149 !s100 @Db`8ECHOcE:h>QH:PS?k0
+Z150 IcVLID`gYYb]<FCD;Ze@f^3
+Z151 VU>SX<=<ok8^kJ<EUZ:1V]3
+R4
+R23
+R24
+R25
+Z152 L0 430
+R8
+r1
+31
+R27
+R28
+R29
+R12
+Z153 n@s@l@r@e@g
+!i10b 1
+!s85 0
+!s101 -O0
+vtags
+Z154 !s100 aR=6D@07o9RQ1RVR@^gBN3
+Z155 IMz<z`FDP:gQd`JFdZ`HJ82
+Z156 VH6:enDPW;LJ>7PAZ;a]oz1
+R4
+R43
+R44
+R45
+L0 1
+R8
+r1
+31
+R47
+R48
+R49
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vtest
+Z157 !s100 gIAhXk4OKhVC3VThK>m0W0
+Z158 IAjJ08W?1W>Rz:0?ezJdh]1
+Z159 Vk<3<[f=78GX=_HO53D;7>3
+R4
+Z160 w1422253194
+Z161 8/home/obzzidian/Projects/PA-MIPS/mips/test.v
+Z162 F/home/obzzidian/Projects/PA-MIPS/mips/test.v
+L0 1
+R8
+r1
+31
+Z163 !s90 -reportprogress|300|-work|pa-processor|/home/obzzidian/Projects/PA-MIPS/mips/test.v|
+R12
+Z164 !s108 1422256600.000634
+Z165 !s107 /home/obzzidian/Projects/PA-MIPS/mips/test.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vTL_C
+Z166 !s100 SSnRbdShALz<<=O?m<cGn0
+Z167 Ii6Qf]mfDeQWA:@9No15:71
+Z168 VX<XTOJYXKM[cL0Rk<TJK03
+R4
+R23
+R24
+R25
+Z169 L0 277
+R8
+r1
+31
+R27
+R28
+R29
+R12
+Z170 n@t@l_@c
+!i10b 1
+!s85 0
+!s101 -O0
+vTLB
+Z171 !s100 aX9bD1[MGkY9_=QW<V=6C2
+Z172 Ikj9K9E1h1E:z:g0zJ5SF20
+Z173 V[[2cHndYZ>FAOSQ;g8SS:3
+R4
+R43
+R44
+R45
+Z174 L0 497
+R8
+r1
+31
+R47
+R48
+R49
+R12
+Z175 n@t@l@b
+!i10b 1
+!s85 0
+!s101 -O0
+vWBTL_C
+Z176 !s100 7j]UmYeI]AAVTOR0NG=U?3
+Z177 IP4a98RIEMle1bk`c]d<iA0
+Z178 V6SI[ed>M?3B45HKBXi6[O3
+R4
+Z179 w1422204671
+R24
+R25
+Z180 L0 231
+R8
+r1
+31
+Z181 !s108 1422204847.984178
+R28
+R29
+R12
+Z182 n@w@b@t@l_@c
+!i10b 1
+!s85 0
+!s101 -O0
+vwriteback
+Z183 !s100 5ZkU]_>g18:3h4oXgWZQn3
+Z184 IaG4=bA6IEH27G^lg;e4Xd2
+Z185 Vz7eCZ`0328L246:cD[nT?0
+R4
+R106
+R107
+R108
+L0 1
+R8
+r1
+31
+R109
+R110
+R111
+R12
+!i10b 1
+!s85 0
+!s101 -O0

@@ -1,0 +1,141 @@
+# Current time Fri Jan 23 15:16:49 2015
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.1d"
+# Version = "2012.11"
+# Date = "Nov  2 2012"
+# Platform = linuxpe
+# 0    0xf7fdb430: '<unknown (@0xf7fdb430)>'
+# 1    0x083c7ea0: '<unknown (@0x83c7ea0)>'
+# 2    0x08061dc6: '<unknown (@0x8061dc6)>'
+# End of Stack Trace
+
+
+# Current time Fri Jan 23 15:16:49 2015
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.1d"
+# Version = "2012.11"
+# Date = "Nov  2 2012"
+# Platform = linuxpe
+# 0    0xf7fdb430: '<unknown (@0xf7fdb430)>'
+# End of Stack Trace
+
+
+# Current time Mon Jan 26 06:07:58 2015
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.1d"
+# Version = "2012.11"
+# Date = "Nov  2 2012"
+# Platform = linuxpe
+# 0    0xf7fdb430: '<unknown (@0xf7fdb430)>'
+# 1    0x083d2d14: '<unknown (@0x83d2d14)>'
+# 2    0x082f78bd: '<unknown (@0x82f78bd)>'
+# 3    0x082f79af: '<unknown (@0x82f79af)>'
+# 4    0x08323c04: '<unknown (@0x8323c04)>'
+# 5    0xf41dc4a9: '/home/obzzidian/Projects/PA-MIPS/mips/cache.v:112'
+# 6    0x081a7535: '<unknown (@0x81a7535)>'
+# 7    0x081a77fe: '<unknown (@0x81a77fe)>'
+# 8    0x08335145: '<unknown (@0x8335145)>'
+# 9    0x08335cf6: '<unknown (@0x8335cf6)>'
+# 10   0xf41db400: '/home/obzzidian/Projects/PA-MIPS/mips/fetch.v:2'
+# 11   0x081a7535: '<unknown (@0x81a7535)>'
+# 12   0x081a77fe: '<unknown (@0x81a77fe)>'
+# 13   0x08335145: '<unknown (@0x8335145)>'
+# 14   0x08335cf6: '<unknown (@0x8335cf6)>'
+# 15   0xf41c5043: '/home/obzzidian/Projects/PA-MIPS/mips/pipeline.v:58'
+# 16   0x081a7535: '<unknown (@0x81a7535)>'
+# 17   0x081a77fe: '<unknown (@0x81a77fe)>'
+# 18   0x08335145: '<unknown (@0x8335145)>'
+# 19   0x08335cf6: '<unknown (@0x8335cf6)>'
+# 20   0xf41c3bce: '/home/obzzidian/Projects/PA-MIPS/mips/test.v:3'
+# 21   0x081a7535: '<unknown (@0x81a7535)>'
+# 22   0x081a77fe: '<unknown (@0x81a77fe)>'
+# 23   0x0837d79b: '<unknown (@0x837d79b)>'
+# 24   0x0837ea45: '<unknown (@0x837ea45)>'
+# 25   0x084b93e5: '<unknown (@0x84b93e5)>'
+# 26   0x084b960a: '<unknown (@0x84b960a)>'
+# 27   0x08a49467: '<unknown (@0x8a49467)>'
+# 28   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 29   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 30   0x08a75633: '<unknown (@0x8a75633)>'
+# 31   0x08a4cbac: '<unknown (@0x8a4cbac)>'
+# 32   0x08a4fc5d: '<unknown (@0x8a4fc5d)>'
+# 33   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 34   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 35   0x08a75893: '<unknown (@0x8a75893)>'
+# 36   0x08a4b32c: '<unknown (@0x8a4b32c)>'
+# 37   0x08a52a2d: '<unknown (@0x8a52a2d)>'
+# 38   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 39   0x08a4c0ad: '<unknown (@0x8a4c0ad)>'
+# 40   0x087cfb03: '<unknown (@0x87cfb03)>'
+# 41   0x08a8324b: '<unknown (@0x8a8324b)>'
+# 42   0x08aaedc2: '<unknown (@0x8aaedc2)>'
+# 43   0x08a910d0: '<unknown (@0x8a910d0)>'
+# 44   0x08a913ce: '<unknown (@0x8a913ce)>'
+# 45   0x089b70f0: '<unknown (@0x89b70f0)>'
+# 46   0x084a0453: '<unknown (@0x84a0453)>'
+# 47   0x083c75f5: '<unknown (@0x83c75f5)>'
+# 48   0x08061dc6: '<unknown (@0x8061dc6)>'
+# End of Stack Trace
+
+
+# Current time Mon Jan 26 06:08:23 2015
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.1d"
+# Version = "2012.11"
+# Date = "Nov  2 2012"
+# Platform = linuxpe
+# 0    0xf7fdb430: '<unknown (@0xf7fdb430)>'
+# 1    0x083d2d14: '<unknown (@0x83d2d14)>'
+# 2    0x082f78bd: '<unknown (@0x82f78bd)>'
+# 3    0x082f79af: '<unknown (@0x82f79af)>'
+# 4    0x08323c04: '<unknown (@0x8323c04)>'
+# 5    0xf6ba39d9: '/home/obzzidian/Projects/PA-MIPS/mips/cache.v:112'
+# 6    0x081a7535: '<unknown (@0x81a7535)>'
+# 7    0x081a77fe: '<unknown (@0x81a77fe)>'
+# 8    0x08335145: '<unknown (@0x8335145)>'
+# 9    0x08335cf6: '<unknown (@0x8335cf6)>'
+# 10   0xf6ba2930: '/home/obzzidian/Projects/PA-MIPS/mips/fetch.v:2'
+# 11   0x081a7535: '<unknown (@0x81a7535)>'
+# 12   0x081a77fe: '<unknown (@0x81a77fe)>'
+# 13   0x08335145: '<unknown (@0x8335145)>'
+# 14   0x08335cf6: '<unknown (@0x8335cf6)>'
+# 15   0xf6b8c573: '/home/obzzidian/Projects/PA-MIPS/mips/pipeline.v:58'
+# 16   0x081a7535: '<unknown (@0x81a7535)>'
+# 17   0x081a77fe: '<unknown (@0x81a77fe)>'
+# 18   0x08335145: '<unknown (@0x8335145)>'
+# 19   0x08335cf6: '<unknown (@0x8335cf6)>'
+# 20   0xf6b8b0fe: '/home/obzzidian/Projects/PA-MIPS/mips/test.v:3'
+# 21   0x081a7535: '<unknown (@0x81a7535)>'
+# 22   0x081a77fe: '<unknown (@0x81a77fe)>'
+# 23   0x0837d79b: '<unknown (@0x837d79b)>'
+# 24   0x0837ea45: '<unknown (@0x837ea45)>'
+# 25   0x0868fd7c: '<unknown (@0x868fd7c)>'
+# 26   0x08a49467: '<unknown (@0x8a49467)>'
+# 27   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 28   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 29   0x08a75633: '<unknown (@0x8a75633)>'
+# 30   0x08a4cbac: '<unknown (@0x8a4cbac)>'
+# 31   0x08a4fc5d: '<unknown (@0x8a4fc5d)>'
+# 32   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 33   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 34   0x08a75893: '<unknown (@0x8a75893)>'
+# 35   0x08a4b32c: '<unknown (@0x8a4b32c)>'
+# 36   0x08a52a2d: '<unknown (@0x8a52a2d)>'
+# 37   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 38   0x08a4c0ad: '<unknown (@0x8a4c0ad)>'
+# 39   0x087cfb03: '<unknown (@0x87cfb03)>'
+# 40   0x08a8324b: '<unknown (@0x8a8324b)>'
+# 41   0x08aaedc2: '<unknown (@0x8aaedc2)>'
+# 42   0x08a910d0: '<unknown (@0x8a910d0)>'
+# 43   0x08a913ce: '<unknown (@0x8a913ce)>'
+# 44   0x089b70f0: '<unknown (@0x89b70f0)>'
+# 45   0x084a0453: '<unknown (@0x84a0453)>'
+# 46   0x083c75f5: '<unknown (@0x83c75f5)>'
+# 47   0x08061dc6: '<unknown (@0x8061dc6)>'
+# End of Stack Trace
+
+
