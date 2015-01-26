@@ -70,6 +70,7 @@ begin
 		IDEX_write <= 0;
 		EX_WBTL_write <= 0;
 		TLC_write <= 0;
+		CWB_write <= 0;
 		pc_write <= 0;
 	end
 	if(ifill_tmp && !dmiss) begin
@@ -81,6 +82,7 @@ begin
 		IDEX_write <= 1;
 		EX_WBTL_write <= 1;
 		TLC_write <= 1;
+		CWB_write <= 1;
 		pc_write <= !imiss;
 	end
 	if(jump) begin

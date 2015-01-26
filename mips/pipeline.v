@@ -92,14 +92,14 @@ exceptions exception_unit(
 
 reorder_buffer ROB(
 	.clk(clk),
-	.stall(ROB_stall),
+	.stall(!pc_we),
 	
 	.alu(rob_index_L), //Alu index
 	.alu_we(alu_reg_write_WBTL),
 	.alu_pc(pc_WBTL),
 	.alu_rd(rd_WBTL),
 	.alu_ex(1'b0),
-	.alu_val(rs_data_EX),
+	.alu_val( (mem_write_WBTL)?rs_data_WBTL:result_WBTL ),
 	.alu_store(mem_write_WBTL),
 	.alu_addr(result_WBTL),
 
@@ -288,6 +288,7 @@ dcache C(
 	.data_in(val_C), //Input data to write 
   	.data_mem(mem_stream), //Full line (from memory)
   	.idx(addr_C[7:3]), //Line on the cache
+  	.fidx(addr_TL[7:3]), //
   	.idb(addr_C[2:0]), //Byte on the line
   	.we(mem_write_C), //Write enabled (miss and store)
   	.fill(dfill), //Fill from memory

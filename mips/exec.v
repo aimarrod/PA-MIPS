@@ -24,6 +24,6 @@ module alu(
 	output[31:0] result
 );
 
-assign result = (branch)?(op_1==0):(op_1 + op_2);
+assign result = (branch)?(op_1!=0):(op_1 + op_2);
 
 endmodule

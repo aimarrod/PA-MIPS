@@ -49,7 +49,7 @@ reg store[7:0];
 reg[31:0] address[7:0];
 
 assign val_out = value[head];
-assign rd_out = store[head];
+assign rd_out = rd[head];
 assign we = valid[head];
 
 assign store_out = store[head];
@@ -57,7 +57,6 @@ assign addr_out = address[head];
 assign tail_out = tail;
 
 always @(posedge clk) begin
-	if(!stall) begin
 		if(alu_we) begin
 			valid[alu] <= 1;
 			value[alu] <= alu_val;
@@ -83,15 +82,14 @@ always @(posedge clk) begin
 			rd[slow] <= slow_rd;
 			store[slow] <= 0;
 		end
-		if(valid[head]) begin
+		if(valid[head] & next_head) begin
 			valid[head] = 0;
 			head = head+1;
 		end
-		if(next_head) begin
+		if(!stall) begin
 			valid[tail] = 0;
 			tail = tail+1;
 		end
-	end
 end
 
 initial begin
