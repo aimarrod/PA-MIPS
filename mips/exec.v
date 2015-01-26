@@ -21,9 +21,15 @@ module alu(
 	input[31:0] op_2,
 	input[11:0] aluop,
 	input branch,
-	output[31:0] result
+	output[31:0] result,
+	output overflow
 );
 
-assign result = (branch)?(op_1==0):(op_1 + op_2);
+always begin
+	if (op_1[31] && op_2[31]) assign overflow = 1;
+	else assign overflow = 0;
+
+	assign result = (branch)?(op_1==0):(op_1 + op_2);
+end
 
 endmodule
