@@ -45,21 +45,21 @@ initial begin
 	p.MEM.bytes[17] <= 8'b00010000;
 	p.MEM.bytes[16] <= 8'b00000000;
 
-	//Instruction 4 Add reg 0 + 10001 to reg 10001
-	p.MEM.bytes[23] <= 8'b00000000;
-	p.MEM.bytes[22] <= 8'b00010001;
-	p.MEM.bytes[21] <= 8'b10001000;
-	p.MEM.bytes[20] <= 8'b00000000;
+	//Instruction 4 Store
+	p.MEM.bytes[23] <= 8'b10101110;
+	p.MEM.bytes[22] <= 8'b00111111;
+	p.MEM.bytes[21] <= 8'b00000000;
+	p.MEM.bytes[20] <= 8'b01000000;
 
-	//Instruction 4 Add reg 0 + 10001 to reg 10001
+	//Instruction 4 Branch back to loop
 	p.MEM.bytes[27] <= 8'b00010110;
 	p.MEM.bytes[26] <= 8'b00100000;
 	p.MEM.bytes[25] <= 8'b00000000;
 	p.MEM.bytes[24] <= 8'b00000100;
 
 	//Instruction 4 Add bnz
-	p.MEM.bytes[31] <= 8'b00010110;
-	p.MEM.bytes[30] <= 8'b00111111;
+	p.MEM.bytes[31] <= 8'b10101100;
+	p.MEM.bytes[30] <= 8'b00100000;
 	p.MEM.bytes[29] <= 8'b00000000;
 	p.MEM.bytes[28] <= 8'b00100010;
 	

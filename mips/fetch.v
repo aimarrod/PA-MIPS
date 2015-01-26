@@ -10,13 +10,16 @@ module fetch(
 
 	output [31:0] inst,
 	output miss,
-	output [31:0] pc_out
+	output [31:0] pc_out,
+	output tlbmiss
 );
 
 reg[31:0] pc, next_pc;
 reg wait_branch;
+wire[21:0] physical;
 
-tags t(.clk(clk), .tag(pc[31:8]), .idx(pc[7:3]), .miss(miss), .fill(fill));
+TLB tlb(.clk(clk), .virtual(pc[31:10]), .physical(physical), .exception(tlbmiss));
+tags t(.clk(clk), .tag({physical, pc[9:8]}), .idx(pc[7:3]), .miss(miss), .fill(fill));
 icache c(.clk(clk), .idx(pc[7:3]), .idb(pc[2:0]), .data_out(inst), .fill(fill), .data_mem(stream));
 
 assign pc_out = pc;

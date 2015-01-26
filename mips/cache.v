@@ -52,6 +52,98 @@ initial begin
 end
 
 endmodule
+
+module dtags(
+  input clk,
+  input [23:0] tag, //Tag
+  input [4:0] idx,
+  input fill,
+  output miss, //Miss cable
+  output dirty
+);
+  
+reg[23:0] tagList[31:0]; //Tag list (32 tags)
+reg dirtyBits[31:0];
+
+assign miss = (tagList[idx] != tag);
+assign dirty = dirtyBits[idx];
+
+always @(posedge clk) begin
+  if(fill) begin
+    tagList[idx] <= tag;
+    dirtyBits[idx] <= 0;
+  end
+end
+
+initial begin
+  tagList[0] <= 23'b11111111111111111111111;
+  tagList[1] <= 23'b11111111111111111111111;
+  tagList[2] <= 23'b11111111111111111111111;
+  tagList[3] <= 23'b11111111111111111111111;
+  tagList[4] <= 23'b11111111111111111111111;
+  tagList[5] <= 23'b11111111111111111111111;
+  tagList[6] <= 23'b11111111111111111111111;
+  tagList[7] <= 23'b11111111111111111111111;
+  tagList[8] <= 23'b11111111111111111111111;
+  tagList[9] <= 23'b11111111111111111111111;
+  tagList[10] <= 23'b11111111111111111111111;
+  tagList[11] <= 23'b11111111111111111111111;
+  tagList[12] <= 23'b11111111111111111111111;
+  tagList[13] <= 23'b11111111111111111111111;
+  tagList[14] <= 23'b11111111111111111111111;
+  tagList[15] <= 23'b11111111111111111111111;
+  tagList[16] <= 23'b11111111111111111111111;
+  tagList[17] <= 23'b11111111111111111111111;
+  tagList[18] <= 23'b11111111111111111111111;
+  tagList[19] <= 23'b11111111111111111111111;
+  tagList[20] <= 23'b11111111111111111111111;
+  tagList[21] <= 23'b11111111111111111111111;
+  tagList[22] <= 23'b11111111111111111111111;
+  tagList[23] <= 23'b11111111111111111111111;
+  tagList[24] <= 23'b11111111111111111111111;
+  tagList[25] <= 23'b11111111111111111111111;
+  tagList[26] <= 23'b11111111111111111111111;
+  tagList[27] <= 23'b11111111111111111111111;
+  tagList[28] <= 23'b11111111111111111111111;
+  tagList[29] <= 23'b11111111111111111111111;
+  tagList[30] <= 23'b11111111111111111111111;
+  tagList[31] <= 23'b11111111111111111111111;
+
+  dirtyBits[0] <= 0;
+  dirtyBits[1] <= 0;
+  dirtyBits[2] <= 0;
+  dirtyBits[3] <= 0;
+  dirtyBits[4] <= 0;
+  dirtyBits[5] <= 0;
+  dirtyBits[6] <= 0;
+  dirtyBits[7] <= 0;
+  dirtyBits[8] <= 0;
+  dirtyBits[9] <= 0;
+  dirtyBits[10] <= 0;
+  dirtyBits[11] <= 0;
+  dirtyBits[12] <= 0;
+  dirtyBits[13] <= 0;
+  dirtyBits[14] <= 0;
+  dirtyBits[15] <= 0;
+  dirtyBits[16] <= 0;
+  dirtyBits[17] <= 0;
+  dirtyBits[18] <= 0;
+  dirtyBits[19] <= 0;
+  dirtyBits[20] <= 0;
+  dirtyBits[21] <= 0;
+  dirtyBits[22] <= 0;
+  dirtyBits[23] <= 0;
+  dirtyBits[24] <= 0;
+  dirtyBits[25] <= 0;
+  dirtyBits[26] <= 0;
+  dirtyBits[27] <= 0;
+  dirtyBits[28] <= 0;
+  dirtyBits[29] <= 0;
+  dirtyBits[30] <= 0;
+  dirtyBits[31] <= 0;
+end
+
+endmodule
   
 module dcache(
   input clk,
@@ -63,7 +155,8 @@ module dcache(
   input we, //Write enabled (miss and store)
   input fill, //Fill from memory
   input word, //Read byte
-  output[31:0] data_out //Output data for reads
+  output[31:0] data_out,
+  output[63:0] data_mem_in //Evictions
 );
 
  reg[7:0] data[31:0][7:0]; 
@@ -72,6 +165,15 @@ module dcache(
  assign data_out[15:8] = (word)?data[idx][idb+1]:{8{data[idx][idb][7]}};
  assign data_out[23:16] = (word)?data[idx][idb+2]:{8{data[idx][idb][7]}};
  assign data_out[31:24] = (word)?data[idx][idb+3]:{8{data[idx][idb][7]}};
+
+ assign data_mem_in[7:0] = data[idx][0];
+ assign data_mem_in[15:8] = data[idx][1]; 
+ assign data_mem_in[23:16] = data[idx][2]; 
+ assign data_mem_in[31:24] = data[idx][3];
+ assign data_mem_in[39:32] = data[idx][4];
+ assign data_mem_in[47:40] = data[idx][5];
+ assign data_mem_in[55:48] = data[idx][6];
+ assign data_mem_in[63:56] = data[idx][7];
 
  always @(posedge clk)
  begin
@@ -390,4 +492,35 @@ module icache(
     data[31][7] <= 8'b11111111;
  end
 
+endmodule
+
+ module TLB(
+  input clk, 
+  input [21:0] virtual, 
+  output [21:0] physical, 
+  output exception
+);
+  // Page size: 2^16.
+  wire[2:0] match;
+  reg [43:0] translations[3:0];
+
+  assign match = (translations[0][43:22]==virtual)?2'd0:
+  (translations[1][43:22]==virtual)?2'd1:
+  (translations[2][43:22]==virtual)?2'd2:2'd3;
+
+  assign exception = (translations[0][43:22] != virtual) &
+    (translations[1][43:22] != virtual)&
+    (translations[2][43:22] != virtual)&
+    (translations[3][43:22] != virtual);
+
+  assign physical = translations[match][21:0];
+
+  initial
+  begin
+    translations[0] <= 0;
+    translations[1] <= 0;
+    translations[2] <= 0;
+    translations[3] <= 0;
+  end
+    
 endmodule

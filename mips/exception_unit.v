@@ -5,6 +5,7 @@ module exceptions(
 	input dfill,
 	input ifill,
 	input jump,
+	input remaining_stores,
 
 	output IFID_we,
 	output IDEX_we,
@@ -30,9 +31,10 @@ module exceptions(
 
 reg pc_write, IFID_write, IDEX_write, EX_WBTL_write, TLC_write, CWB_write, EXS1_write, S12_write, S23_write, S34_write, IFID_res, IDEX_res, EX_WBTL_res, TLC_res, CWB_res, EXS1_res, S12_res, S23_res, S34_res;
 
-assign IFID_we = IFID_write;
-assign IDEX_we = IDEX_write;
-assign EX_WBTL_we = EX_WBTL_write;
+assign pc_we = pc_write & !remaining_stores;
+assign IFID_we = IFID_write & !remaining_stores;
+assign IDEX_we = IDEX_write & !remaining_stores;
+assign EX_WBTL_we = EX_WBTL_write & !remaining_stores;
 assign TLC_we = TLC_write;
 assign CWB_we = CWB_write;
 assign EXS1_we = EXS1_write;
@@ -115,6 +117,64 @@ initial begin
 	S23_res <= 0; 
 	S34_res <= 0;
 	pc_write <= 1;
+end
+
+endmodule
+
+module exception_regs(
+	input clk,
+	input iF,
+	input iD,
+	input iEX,
+	input iTL, 
+	input iC,
+	input iWB,
+	input iS1,
+	input iS2,
+	input iS3,
+	input iS4,
+	input iS5,
+	output oF,
+	output oD,
+	output oEX,
+	output oTL,
+	output oC,
+	output oWB,
+	output oS1,
+	output oS2,
+	output oS3,
+	output oS4,
+	output oS5
+);
+
+reg F, D, EX, TL, C, WB, S1, S2, S3, S4, S5;
+
+assign oF = F;
+assign oD = D;
+assign oEX = EX;
+assign oTL = TL;
+assign oWB = WB;
+assign oS1 = S1;
+assign oS2 = S2;
+assign oS3 = S3;
+assign oS4 = S4;
+assign oS5 = S5;
+
+always @(posedge clk)
+begin
+	F <= iF;
+	D <= F | iD;
+	EX <= D | iEX;
+	
+	TL <= EX | iTL;
+	C <= TL | iC;
+	WB <= C | iWB;
+
+	S1 <= EX | iS1;
+	S2 <= S1 | iS2;
+	S3 <= S2 | iS3;
+	S4 <= S3 | iS4;
+	S5 <= S4 | iS5;
 end
 
 endmodule

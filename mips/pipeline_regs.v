@@ -198,6 +198,8 @@ module EX_WBTL(
 	output mem_reg_write_out,
 	input word_in,
 	output word_out,
+	input branch_in,
+	input branch_out,
 
 	input[2:0] rob_index_in,
 	output[2:0] rob_index_out
@@ -218,6 +220,7 @@ assign mem_write_out = mem_write;
 assign alu_reg_write_out = alu_reg_write;
 assign mem_reg_write_out = mem_reg_write;
 assign word_out = word;
+assign branch_out = branch;
 
 assign pc_out = pc;
 assign rob_index_out = rob_index;
@@ -234,6 +237,7 @@ begin
 		alu_reg_write <= alu_reg_write_in;
 		mem_reg_write <= mem_reg_write_in;
 		word <= word_in;
+		branch <= branch_in;
 
 		pc <= pc_in;
 		rob_index <= rob_index_in;
@@ -244,6 +248,7 @@ begin
 		rs_data <= 0;
 		alu_result <= 0;
 		word <= 0;
+		branch <= 0;
 
 		mem_write <= 0;
 		alu_reg_write <= 0;
@@ -264,6 +269,7 @@ initial begin
 	mem_reg_write <= 0;
 	pc <= 0;
 	rob_index <= 0;
+	branch <= 0;
 end
 
 endmodule
@@ -369,6 +375,9 @@ module C_WB(
 	input[2:0] rob_index_in,
 	output[2:0] rob_index_out,
 
+	input[31:0] addr_in,
+	output[31:0] addr_out,
+
 	input[31:0] pc_in,
 	output[31:0] pc_out
 );
@@ -377,13 +386,14 @@ reg[31:0] val;
 reg[4:0] rd;
 reg write;
 reg[2:0] rob_index;
-reg[31:0] pc;
+reg[31:0] pc, addr;
 
 assign write_out = write;
 assign rd_out = rd;
 assign val_out = val;
 assign rob_index_out = rob_index;
 assign pc_out = pc;
+assign addr_out = addr_in;
 
 always @(posedge clk) begin
 	if(we) begin
@@ -392,6 +402,7 @@ always @(posedge clk) begin
 		write <= write_in;
 		rob_index <= rob_index_in;
 		pc <= pc_in;
+		addr <= addr_in;
 	end
 	if(reset) begin
 		val <= 0;
@@ -399,6 +410,7 @@ always @(posedge clk) begin
 		write <= 0;
 		rob_index <= 0;
 		pc <= 0;
+		addr <= 0;
 	end
 end
 
@@ -408,6 +420,7 @@ initial begin
 	write <= 0;
 	rob_index <= 0;
 	pc <= 0;
+	addr <= 0;
 end
 
 endmodule
